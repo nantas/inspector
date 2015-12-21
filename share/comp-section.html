@@ -85,7 +85,8 @@
       }
     </style>
 
-    <div class="header" id="header"
+    <div class="header" id="header" 
+      title="[[_T('INSPECTOR.component.header')]]"
       on-click="_onFoldClick"
       on-keydown="_onKeyDown"
       on-focus="_onFocus"
@@ -93,7 +94,10 @@
       >
       <div class="layout horizontal center flex-1">
         <i class$="{{_foldClass(folded)}}"></i>
-        <editor-checkbox checked="{{target.enabled}}" nofocus hidden="[[!target.__editor__._showTick]]"></editor-checkbox>
+        <editor-checkbox checked="{{target.enabled}}" 
+          nofocus 
+          hidden="[[!target.__editor__._showTick]]"
+          title="[[_T('INSPECTOR.component.enabled')]]"></editor-checkbox>
         <div class="title">{{_targetName(target)}}</div>
       </div>
       <div class="close" on-click="_onCloseClick">
